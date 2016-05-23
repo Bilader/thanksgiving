@@ -1,0 +1,42 @@
+﻿@using System
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Thanksgiving</title>
+    <link rel="stylesheet" href="~/assets/css.css"/>
+    <script src="~/assets/scripts.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            @Html.ActionLink("Thanksgiving Home", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+        </div>
+        <div class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container body-content  ">
+    <div class="row">
+        <div class="col-sm-12">
+            @RenderBody()
+        </div>
+    </div>
+    <hr/>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-12">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Thanksgiving Home by kasthack</p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

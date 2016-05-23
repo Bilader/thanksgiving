@@ -1,0 +1,57 @@
+﻿@model System.Collections.Generic.IEnumerable<TurkeyBase.Models.TurkList>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search results(all)</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NationalIdentifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mother_first)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.father_first)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_birth)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NationalIdentifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.First)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mother_first)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.father_first)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_birth)
+        </td>
+        <td>
+            @Html.ActionLink("Full info", "Get", new {id=item.Uid},new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+</table>

@@ -1,0 +1,160 @@
+﻿@model TurkeyBase.Models.Turk
+
+@{
+    ViewBag.Title = Model.First + " " + Model.Last;
+}
+
+<h2>@Model.First @Model.Last</h2>
+<div>
+<hr/>
+
+<div class="col-sm-12">
+<div class="col-sm-6">
+    @if ( Model.Deleted < 2 ) {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.LabelFor( model => model.Uid )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.Uid )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.NationalIdentifier )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.NationalIdentifier )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.First )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.First )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.Last )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.Last )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.mother_first )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.mother_first )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.father_first )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.father_first )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.gender )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.gender )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.birth_city )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.birth_city )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.date_of_birth )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.date_of_birth )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.id_registration_city )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.id_registration_city )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.id_registration_district )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.id_registration_district )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.address_city )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.address_city )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.address_district )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.address_district )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.address_neighborhood )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.address_neighborhood )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.street_address )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.street_address )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.door_or_entrance_number )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.door_or_entrance_number )
+            </dd>
+
+            <dt>
+                @Html.LabelFor( model => model.misc )
+            </dt>
+
+            <dd>
+                @Html.DisplayFor( model => model.misc )
+            </dd>
+
+        </dl>
+    }
+    else {
+        <h1>Info has been deleted</h1>
+    }
+
+</div>
+
+</div>
+</div>
